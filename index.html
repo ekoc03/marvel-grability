@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Marvel Comics Grability</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+</head>
+<body>
+	<!-- Loading -->
+	<div id="loading" style="display: none;"><img src="assets/img/loading.gif" alt="loading"></div>	
+	<!-- Search -->
+	<div class="container">
+		<img src="assets/img/marvel_logo.png" alt="Marvel Logo" class="logo">
+		<nav class="navbar">
+			<div class=" nav-container col-lg-6 col-md-6 col-sm-10 col-xs-12">
+				<form id="form" class="form-inline">
+					<div class="form-group">
+						<input type="text" id="search" class="form-control">
+						<button class="btn" type="submit" id="btn-search">Search</button>
+					</div>
+				</form>
+				<a href="#" id="view-favorites"><span class="star">&bigstar;</span>My favorites</a>
+			</div>
+		</nav>
+		<!-- Super Heroes -->
+		<ul class="super-heroes"></ul>
+		<!-- Super Heroe Info -->
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 super-info"></div>
+		<!-- Comics -->
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 comics-container">
+			<ul class="comics"></ul>
+		</div>
+		<!-- Favorites Comics -->
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<ul class="list-favorites"></ul>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade comic-detail" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+			
+		  </div>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- Template for characteres -->
+	<script id="tmpl-super-heroes" type="text/template">
+		<li><a href="#" data-id="<%= data.id %>"><img src="<%= data.thumbnail.path %>.<%= data.thumbnail.extension %>"><%= data.name %></a></li>
+	</script>
+<!-- Template for character detail -->
+	<script id="tmpl-super" type="text/template">
+		<img src="<%= data.thumbnail.path %>.<%= data.thumbnail.extension %>" alt="Super Heroe">
+		<h3 class="text-center"><%= data.name %></h3>
+		<p class="text-center"><%= data.description %></p>
+	</script>
+<!-- Template for character comics -->
+	<script id="tmpl-comics" type="text/template">
+		<li id="<%= data.title %>" ><%= data.title %> <a href="#" id="<%= data.id %>" data-toggle="modal" data-target=".comic-detail">View more</a></li>
+	 </script>
+<!-- Template for favorites list -->
+	<script id="tmpl-favorites" type="text/template">
+		<li>
+			<span class="delete" data-comic='{ "image": "<%= data.image %>",   "title": "<%= data.title  %>", "id": <%= data.id %>  }'>&times;</span>
+			<p><%= data.title %></p>
+			<img src="<%= data.image %>" alt="">
+		</li>
+	</script>
+<!-- Template for modal with comic information -->
+	<script id="tmpl-modal" type="text/template">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title"><%= data.title %></h4>
+		  </div>
+		  <div class="modal-body">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<img src="<%= data.thumbnail.path %>.<%= data.thumbnail.extension %>" alt="Comic Image">
+			</div>
+			<div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+				<ul class="comic-info">
+					<li><%= data.description %></li>
+					<li>Price: <%= data.prices[0].price %></li>
+				</ul>
+			</div>
+		  </div>
+		  <div class="modal-footer">
+		 		<button class="btn add-favorite" data-comic='{ "image": "<%= data.thumbnail.path %>.<%= data.thumbnail.extension %>",   "title": "<%= data.title  %>", "id": <%= data.id %>  }'>Add to favorites</button>
+			<button type="button" class="btn btn-close" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	</script>
+</body>
+</html>
+
+

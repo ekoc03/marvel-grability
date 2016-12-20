@@ -1,0 +1,98 @@
+
+.comics {
+	margin-left:0;
+	 @media(max-width: 768px){
+    	margin-top:40px;
+    }
+	li{
+		padding: 0 0 20px 40px;
+	    border-left: 1px solid $line-color;
+	    margin: 0;
+	}
+	a{
+		margin-left:10px;
+		color: $blue;
+	}
+	  
+}
+
+.comic-detail{
+	.modal-content{
+		border-radius: 0;
+		background-color: #313131;
+		h4{
+			display: inline-block;
+			text-transform:uppercase;
+			color: $blue;
+		}
+	}
+	.modal-header{
+		border-color: $line-color;
+		span.star{
+			display: inline-block;
+			width:20px;
+			margin-right: 10px;
+			font-size: 20px;
+			color: $yellow;
+		}
+	}
+	.modal-body{
+		overflow:auto;
+		img{
+			height: 250px;
+		}
+	}
+	.modal-footer{
+		border:0;
+		overflow:auto;
+	}
+	.add-favorite{
+		background: $red;
+	}
+	.btn-close{
+		width: 130px;
+	}
+}
+
+.comic-info{
+	list-style-type:none;
+	padding:0;
+	li:nth-child(1){
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 10;
+		-webkit-box-orient: vertical;
+	}
+	li:nth-child(2){
+		margin-top: 30px;
+	}
+}
+
+.list-favorites{
+	list-style-type: none;
+    width: 300px;
+    margin: 0 auto;
+	li{
+		margin-top: 30px;
+		position: relative;
+	}
+	p{
+		color: $blue;
+	}
+	img{
+	    width: 140px;
+	}
+	.delete{
+		cursor: pointer;
+	    background: $red;
+	    height: 30px;
+	    width: 30px;
+	    display: block;
+	    border-radius: 50%;
+	    text-align: center;
+	    font-size: 22px;
+	    position: absolute;
+	    top: -2px;
+	    left: -40px;
+	}
+}

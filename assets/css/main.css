@@ -1,0 +1,181 @@
+body {
+  background-color: #1C1C1C;
+  background-image: url("../img/texture.png");
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 40px;
+  font-size: 16px;
+  color: #fff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.btn {
+  width: 160px;
+  border-radius: 0;
+  background: #04C7F4;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold; }
+  .btn:hover, .btn:active, .btn:focus {
+    opacity: 0.8;
+    color: #fff; }
+
+.logo {
+  display: block;
+  margin: 30px auto;
+  width: 400px; }
+  @media (max-width: 442px) {
+    .logo {
+      width: 320px; } }
+
+#loading {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(49, 52, 56, 0.9);
+  z-index: 99; }
+  #loading img {
+    margin: 0 auto;
+    display: block;
+    width: 170px;
+    padding-top: 20%; }
+
+.nav-container {
+  float: none;
+  margin: 0 auto; }
+  .nav-container form {
+    width: 400px;
+    margin: 0 auto; }
+    @media (max-width: 442px) {
+      .nav-container form {
+        width: 320px; } }
+  .nav-container #view-favorites {
+    text-align: center;
+    color: #F7C137;
+    display: block;
+    margin-top: 20px; }
+    .nav-container #view-favorites .star {
+      margin-right: 10px; }
+    .nav-container #view-favorites:hover {
+      text-decoration: none;
+      color: #04C7F4; }
+
+#form input {
+  border-radius: 0;
+  height: 42px;
+  font-size: 18px; }
+#form button {
+  height: 42px;
+  margin-left: 10px; }
+  @media (max-width: 768px) {
+    #form button {
+      margin: 30px auto 0 auto;
+      display: block; } }
+
+.super-heroes, .comics {
+  width: 500px;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 20px;
+  max-height: 450px;
+  overflow: scroll; }
+  .super-heroes li, .comics li {
+    margin-bottom: 20px;
+    color: #fff; }
+  .super-heroes a, .comics a {
+    color: #fff; }
+  .super-heroes img, .comics img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 50%; }
+  @media (max-width: 530px) {
+    .super-heroes, .comics {
+      width: 370px; } }
+
+.super-info h3 {
+  text-align: center;
+  margin-bottom: 30px; }
+.super-info img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 30px auto; }
+
+.comics {
+  margin-left: 0; }
+  @media (max-width: 768px) {
+    .comics {
+      margin-top: 40px; } }
+  .comics li {
+    padding: 0 0 20px 40px;
+    border-left: 1px solid #90E5F1;
+    margin: 0; }
+  .comics a {
+    margin-left: 10px;
+    color: #04C7F4; }
+
+.comic-detail .modal-content {
+  border-radius: 0;
+  background-color: #313131; }
+  .comic-detail .modal-content h4 {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #04C7F4; }
+.comic-detail .modal-header {
+  border-color: #90E5F1; }
+  .comic-detail .modal-header span.star {
+    display: inline-block;
+    width: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #F7C137; }
+.comic-detail .modal-body {
+  overflow: auto; }
+  .comic-detail .modal-body img {
+    height: 250px; }
+.comic-detail .modal-footer {
+  border: 0;
+  overflow: auto; }
+.comic-detail .add-favorite {
+  background: #E92227; }
+.comic-detail .btn-close {
+  width: 130px; }
+
+.comic-info {
+  list-style-type: none;
+  padding: 0; }
+  .comic-info li:nth-child(1) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical; }
+  .comic-info li:nth-child(2) {
+    margin-top: 30px; }
+
+.list-favorites {
+  list-style-type: none;
+  width: 300px;
+  margin: 0 auto; }
+  .list-favorites li {
+    margin-top: 30px;
+    position: relative; }
+  .list-favorites p {
+    color: #04C7F4; }
+  .list-favorites img {
+    width: 140px; }
+  .list-favorites .delete {
+    cursor: pointer;
+    background: #E92227;
+    height: 30px;
+    width: 30px;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 22px;
+    position: absolute;
+    top: -2px;
+    left: -40px; }
+
+/*# sourceMappingURL=main.css.map */
