@@ -1,5 +1,5 @@
 # marvel-grability
-Grability Frontend test
+Frontend test
 Elsa Olivares
 
 Capas de aplicación:
